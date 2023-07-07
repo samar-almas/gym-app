@@ -1,7 +1,11 @@
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+
 const App = () => {
+  const [selectedPage, setSelectedPage] = useState<string>("home");
   return (
-    <div className="text-white px-4 sm:px-8 py-2 sm:py-3 bg-sky-700 hover:bg-sky-800">
-      App
+    <div className="app bg-gray-2">
+      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
     </div>
   );
 };
